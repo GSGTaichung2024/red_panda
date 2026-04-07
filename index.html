@@ -11,7 +11,7 @@
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -90,7 +90,8 @@
 
 <body>
     <div class="container">
-        <a href="https://lin.ee/y58bjkB" target="_blank" onclick="fbq('track', 'Lead');">
+        <a href="https://lin.ee/y58bjkB" target="_blank"
+            onclick="event.preventDefault(); fbq('track', 'Lead'); setTimeout(() => { window.open(this.href, '_blank') || (window.location.href = this.href); }, 500);">
             <img src="image.webp" alt="全民大跳槽 51888" class="fullscreen-img">
         </a>
     </div>
